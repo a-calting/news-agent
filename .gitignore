@@ -1,0 +1,6 @@
+# Never commit your secret API key.
+.env
+
+# Python cache files.
+__pycache__/
+*.pyc
