@@ -560,7 +560,9 @@ def publish_to_github_pages(html_text):
         print(f"  (git commit failed: {commit.stderr.strip()})")
         return False
 
-    push = git("push")
+    # Push explicitly to main so it works the same on your laptop and on
+    # GitHub's servers (where the branch may not be set up to track a remote).
+    push = git("push", "origin", "HEAD:main")
     if push.returncode != 0:
         print(f"  (git push failed: {push.stderr.strip()})")
         return False
