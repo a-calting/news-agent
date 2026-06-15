@@ -533,29 +533,37 @@ def generate_digest_html(data, articles):
 """
 
 
-def publish_to_github_pages(html_text):
-    """Save the page to docs/index.html and push it to GitHub so Pages serves it.
-
-    Returns True if the page was pushed (or was already up to date), False if
-    publishing failed. Either way the page is saved locally in docs/index.html.
-    """
+def write_digest_page(html_text):
+    """Save the digest page to docs/index.html on disk (not yet committed)."""
     os.makedirs(DOCS_DIR, exist_ok=True)
     with open(DIGEST_PATH, "w", encoding="utf-8") as page_file:
         page_file.write(html_text)
 
+
+def publish_changes():
+    """Commit and push the digest page AND the notified-stories record together.
+
+    Committing notified.json into the repo is what lets the agent remember what
+    it already sent when it runs in the cloud (GitHub Actions checks out a fresh
+    copy each time, so a local-only file would be forgotten every hour).
+
+    Returns True if pushed (or already up to date), False if a git step failed.
+    """
     def git(*git_args):
         return subprocess.run(
             ["git", *git_args], cwd=REPO_DIR, capture_output=True, text=True
         )
 
-    git("add", "docs/index.html")
+    # Stage the files that exist (notified.json is absent only on a first run).
+    tracked = [path for path in ("docs/index.html", "notified.json")
+               if os.path.exists(os.path.join(REPO_DIR, path))]
+    git("add", *tracked)
 
-    # If the page is identical to what's already committed, there's nothing
-    # to push — that's still a success.
+    # If nothing changed since the last commit, there's nothing to push.
     if git("diff", "--cached", "--quiet").returncode == 0:
         return True
 
-    commit = git("commit", "-m", "Update daily digest")
+    commit = git("commit", "-m", "Update digest and notification record")
     if commit.returncode != 0:
         print(f"  (git commit failed: {commit.stderr.strip()})")
         return False
@@ -602,63 +610,18 @@ def save_notified(notified):
         print(f"  (Could not save {SEEN_PATH}: {error})")
 
 
-def main():
-    # Load the API key from the .env file into the environment.
-    load_dotenv()
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key or api_key == "PASTE_YOUR_KEY_HERE":
-        print("No Gemini API key found.")
-        print("Get a free key at https://aistudio.google.com/apikey, then paste")
-        print("it into the .env file (replace PASTE_YOUR_KEY_HERE).")
-        return
+def send_notifications(data, articles, topic):
+    """Push the new mini/medium notifications, then the 'Résumé du jour' one.
 
-    print("Fetching headlines...")
-    articles = collect_all_articles()
-    if not articles:
-        print("No headlines could be fetched.")
-        return
-
-    print(f"Sending {len(articles)} headlines to Gemini for sorting...")
-    try:
-        data = analyze_with_gemini(articles, api_key)
-    except Exception as error:
-        print(f"The AI request failed: {error}")
-        return
-
-    stories = data.get("stories", [])
-    if not stories:
-        print("The AI did not return any stories.")
-        return
-
-    print_grouped(data, articles)
-
+    A story is only pushed if we haven't already sent it before (tracked by its
+    article link in notified.json). Newly sent stories are recorded so they are
+    never repeated on a later run. Updates notified.json on disk.
+    """
     by_id = {a["id"]: a for a in articles}
+    stories = data.get("stories", [])
 
-    # Always build and publish the digest page. Publishing is not a notification,
-    # so it still happens during quiet hours — the agent keeps "collecting".
-    print("\nBuilding the digest page...")
-    published = publish_to_github_pages(generate_digest_html(data, articles))
-    print(f"Digest saved to {DIGEST_PATH}")
-    if published:
-        print(f"Published to {PAGE_URL}")
-    else:
-        print("The page was saved locally but could not be published to GitHub.")
-
-    # Quiet hours (23:00–08:00, Europe/Paris): keep silent — send nothing.
-    if in_quiet_hours():
-        print("\nQuiet hours (23h–8h, Europe/Paris) — no notifications sent.")
-        return
-
-    # The topic name is read from the environment / .env (never hard-coded).
-    topic = os.getenv("NTFY_TOPIC")
-    if not topic:
-        print("No NTFY_TOPIC found — skipping phone notifications.")
-        return
-
-    # 1) Short mini/medium notifications. Only stories the AI marked "micro" or
-    #    "medium" are pushed (the lead and "none" stories are not) — AND only if
-    #    we haven't already notified you about them on an earlier run. Stories
-    #    are remembered by their article link, which stays the same across runs.
+    # Only stories the AI marked "micro" or "medium" are pushed (not the lead or
+    # "none"), and only those we haven't already sent before.
     notified = load_notified()
     today_iso = now_local().strftime("%Y-%m-%d")
 
@@ -699,7 +662,7 @@ def main():
     save_notified(notified)
     print(f"Sent {sent} of {len(fresh)} new mini/medium notifications.")
 
-    # 2) Send the single "Résumé du jour" notification that opens the page.
+    # The single "Résumé du jour" notification that opens the digest page.
     lead_headline = (data.get("lead") or {}).get("headline_fr", "")
     message = lead_headline or "Votre résumé du jour est prêt."
     message += f"\n\nTouchez pour ouvrir le résumé complet ({len(stories)} articles)."
@@ -708,6 +671,61 @@ def main():
         print('Sent the "Résumé du jour" notification.')
     except Exception as error:
         print(f"Could not send the digest notification: {error}")
+
+
+def main():
+    # Load the API key from the .env file into the environment.
+    load_dotenv()
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key or api_key == "PASTE_YOUR_KEY_HERE":
+        print("No Gemini API key found.")
+        print("Get a free key at https://aistudio.google.com/apikey, then paste")
+        print("it into the .env file (replace PASTE_YOUR_KEY_HERE).")
+        return
+
+    print("Fetching headlines...")
+    articles = collect_all_articles()
+    if not articles:
+        print("No headlines could be fetched.")
+        return
+
+    print(f"Sending {len(articles)} headlines to Gemini for sorting...")
+    try:
+        data = analyze_with_gemini(articles, api_key)
+    except Exception as error:
+        print(f"The AI request failed: {error}")
+        return
+
+    stories = data.get("stories", [])
+    if not stories:
+        print("The AI did not return any stories.")
+        return
+
+    print_grouped(data, articles)
+
+    # Build the digest page now (saved to disk; committed at the very end).
+    print("\nBuilding the digest page...")
+    write_digest_page(generate_digest_html(data, articles))
+    print(f"Digest saved to {DIGEST_PATH}")
+
+    # Notifications are skipped entirely during quiet hours; the page is still
+    # built above and published below, so the agent keeps "collecting" silently.
+    if in_quiet_hours():
+        print("\nQuiet hours (23h–8h, Europe/Paris) — no notifications sent.")
+    else:
+        topic = os.getenv("NTFY_TOPIC")  # read from the environment / .env
+        if not topic:
+            print("No NTFY_TOPIC found — skipping phone notifications.")
+        else:
+            send_notifications(data, articles, topic)
+
+    # Commit and push the page AND notified.json together. Saving notified.json
+    # into the repo is what lets the cloud remember what it already sent.
+    published = publish_changes()
+    if published:
+        print(f"\nPublished to {PAGE_URL}")
+    else:
+        print("\nThe page was saved locally but could not be published to GitHub.")
 
 
 if __name__ == "__main__":
