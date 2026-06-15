@@ -85,6 +85,14 @@ LOCAL_TZ = ZoneInfo("Europe/Paris")
 QUIET_START = 23   # 11 pm
 QUIET_END = 8      # 8 am
 
+# Safety cap: the most story notifications (mini/medium) the agent will push in
+# a SINGLE run. This stops your phone from being flooded when many stories pile
+# up at once — for example the first run after overnight quiet hours, or if the
+# "already sent" memory was ever cleared. Any extras beyond the cap are simply
+# left for later runs (sent a few at a time), and every story still appears on
+# the digest page straight away regardless.
+MAX_NOTIFICATIONS_PER_RUN = 3
+
 # Where the published digest lives, and the public web address GitHub Pages
 # serves it at. The script writes the page into docs/index.html and pushes it.
 REPO_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -644,10 +652,19 @@ def send_notifications(data, articles, topic):
             continue
         fresh.append(story)
 
+    # Never push more than MAX_NOTIFICATIONS_PER_RUN at once. Extras are held
+    # back (not sent, not recorded) so a later run picks them up a few at a
+    # time. They already appear on the digest page, so nothing is lost.
+    to_send = fresh[:MAX_NOTIFICATIONS_PER_RUN]
+    held_back = len(fresh) - len(to_send)
+
     print(f"\n{len(candidates)} mini/medium stories selected — "
           f"{already_sent} already sent before, {len(fresh)} new to send.")
+    if held_back:
+        print(f"Cap is {MAX_NOTIFICATIONS_PER_RUN}/run — sending {len(to_send)} now, "
+              f"holding back {held_back} for later runs.")
     sent = 0
-    for story in fresh:
+    for story in to_send:
         # A colored circle at the start of the title shows the tier at a glance:
         # 🔵 mini, 🟢 medium (🟣 is reserved for the digest notification below).
         article = by_id.get(story["id"])
@@ -666,7 +683,7 @@ def send_notifications(data, articles, topic):
             print(f"  (Could not send '{title}': {error})")
         # A short pause so we stay under ntfy's free rate limit.
         time.sleep(1)
-    print(f"Sent {sent} of {len(fresh)} new mini/medium notifications.")
+    print(f"Sent {sent} of {len(to_send)} new mini/medium notifications.")
 
     # 2) The "Résumé du jour" digest ping — at most once per day. The first run
     #    after quiet hours (~8am) sends it; later hourly runs skip it. The page
