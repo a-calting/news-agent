@@ -7,9 +7,10 @@ What it does, in plain terms:
   3. The AI sorts every story into one of your categories (in French), decides
      which deserve a phone notification, and picks one lead story of the day.
   4. Pushes short mini/medium notifications to your phone via ntfy.
-  5. Builds a full digest web page (lead story + everything grouped by category),
-     publishes it to GitHub Pages, and sends a "Résumé du jour" notification
-     whose tap opens that page.
+  5. Builds a full digest web page (lead story + everything grouped by category)
+     and publishes it to GitHub Pages every run. Sends a "Résumé du jour"
+     notification (whose tap opens the page) at most once per day — on the first
+     run after quiet hours (~8am).
 
 Setup (one time):
   - Put your free Gemini API key in the .env file (get one at
@@ -577,54 +578,61 @@ def publish_changes():
     return True
 
 
-def load_notified():
-    """Return {article link: "YYYY-MM-DD"} for stories already pushed to the phone.
+def load_state():
+    """Load the saved state from notified.json:
 
-    Entries older than SEEN_RETENTION_DAYS are dropped so the file stays small.
+      - "notified": {article link: "YYYY-MM-DD"} for stories already pushed.
+        Entries older than SEEN_RETENTION_DAYS are pruned so the file stays small.
+      - "last_digest_sent": the date the daily "Résumé du jour" ping last went out
+        (used to send it only once per day), or None if never.
+
     A missing or unreadable file just means "nothing sent yet".
     """
     try:
         with open(SEEN_PATH, encoding="utf-8") as seen_file:
-            stored = json.load(seen_file).get("notified", {})
+            stored = json.load(seen_file)
     except (FileNotFoundError, ValueError):
-        return {}
+        stored = {}
 
     cutoff = now_local().date() - timedelta(days=SEEN_RETENTION_DAYS)
     fresh = {}
-    for link, day in stored.items():
+    for link, day in stored.get("notified", {}).items():
         try:
             when = datetime.strptime(day, "%Y-%m-%d").date()
         except (TypeError, ValueError):
             continue  # skip any malformed entry
         if when >= cutoff:
             fresh[link] = day
-    return fresh
+
+    return {"notified": fresh, "last_digest_sent": stored.get("last_digest_sent")}
 
 
-def save_notified(notified):
-    """Save the {article link: date} record of stories we've pushed."""
+def save_state(state):
+    """Save the full state (pushed stories + last digest date) to notified.json."""
     try:
         with open(SEEN_PATH, "w", encoding="utf-8") as seen_file:
-            json.dump({"notified": notified}, seen_file, ensure_ascii=False, indent=2)
+            json.dump(state, seen_file, ensure_ascii=False, indent=2)
     except OSError as error:
         print(f"  (Could not save {SEEN_PATH}: {error})")
 
 
 def send_notifications(data, articles, topic):
-    """Push the new mini/medium notifications, then the 'Résumé du jour' one.
+    """Push new mini/medium notifications, and the daily 'Résumé du jour' ping.
 
-    A story is only pushed if we haven't already sent it before (tracked by its
-    article link in notified.json). Newly sent stories are recorded so they are
-    never repeated on a later run. Updates notified.json on disk.
+    Mini/medium stories are pushed only if not already sent before (tracked by
+    article link). The digest ping is sent at most ONCE per day — on the first
+    run of the day, which (because of quiet hours) is the ~8am run. The digest
+    page itself keeps updating every run regardless.
     """
     by_id = {a["id"]: a for a in articles}
     stories = data.get("stories", [])
 
-    # Only stories the AI marked "micro" or "medium" are pushed (not the lead or
-    # "none"), and only those we haven't already sent before.
-    notified = load_notified()
+    state = load_state()
+    notified = state["notified"]
     today_iso = now_local().strftime("%Y-%m-%d")
 
+    # 1) Mini/medium notifications — only stories the AI marked "micro"/"medium"
+    #    (not the lead or "none"), and only those we haven't already sent.
     candidates = [s for s in stories if s.get("notify") in ("micro", "medium")]
     fresh = []
     already_sent = 0
@@ -658,19 +666,25 @@ def send_notifications(data, articles, topic):
             print(f"  (Could not send '{title}': {error})")
         # A short pause so we stay under ntfy's free rate limit.
         time.sleep(1)
-
-    save_notified(notified)
     print(f"Sent {sent} of {len(fresh)} new mini/medium notifications.")
 
-    # The single "Résumé du jour" notification that opens the digest page.
-    lead_headline = (data.get("lead") or {}).get("headline_fr", "")
-    message = lead_headline or "Votre résumé du jour est prêt."
-    message += f"\n\nTouchez pour ouvrir le résumé complet ({len(stories)} articles)."
-    try:
-        send_ntfy_notification(topic, "🟣 Résumé du jour", message, click=PAGE_URL)
-        print('Sent the "Résumé du jour" notification.')
-    except Exception as error:
-        print(f"Could not send the digest notification: {error}")
+    # 2) The "Résumé du jour" digest ping — at most once per day. The first run
+    #    after quiet hours (~8am) sends it; later hourly runs skip it. The page
+    #    it opens was just rebuilt above, so it covers everything since yesterday.
+    if state.get("last_digest_sent") == today_iso:
+        print("Digest notification already sent today — skipping (page still updated).")
+    else:
+        lead_headline = (data.get("lead") or {}).get("headline_fr", "")
+        message = lead_headline or "Votre résumé du jour est prêt."
+        message += f"\n\nTouchez pour ouvrir le résumé complet ({len(stories)} articles)."
+        try:
+            send_ntfy_notification(topic, "🟣 Résumé du jour", message, click=PAGE_URL)
+            state["last_digest_sent"] = today_iso  # remember so it's once per day
+            print('Sent the "Résumé du jour" notification (once per day).')
+        except Exception as error:
+            print(f"Could not send the digest notification: {error}")
+
+    save_state(state)
 
 
 def main():
