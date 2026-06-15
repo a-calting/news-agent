@@ -4,3 +4,6 @@
 # Python cache files.
 __pycache__/
 *.pyc
+
+# Local record of which stories were already pushed (stays on your computer).
+notified.json

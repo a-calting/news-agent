@@ -1,0 +1,47 @@
+name: Hourly news agent
+
+# When to run.
+on:
+  schedule:
+    # Every hour, on the hour. GitHub uses UTC; the script itself applies your
+    # Europe/Paris timezone (including quiet hours), so no adjustment is needed.
+    - cron: "0 * * * *"
+  # Lets you also run it on demand from the Actions tab ("Run workflow").
+  workflow_dispatch: {}
+
+# Allow the job to push the updated digest page back into the repository.
+permissions:
+  contents: write
+
+# Never let two runs overlap (they would both try to push the page).
+concurrency:
+  group: news-agent
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the libraries
+        run: python -m pip install -r requirements.txt
+
+      - name: Let the agent commit the digest page
+        run: |
+          git config user.name "news-agent"
+          git config user.email "actions@users.noreply.github.com"
+
+      - name: Run the news agent
+        # The secrets you store in GitHub become environment variables here.
+        # The script reads them with os.getenv(...), exactly like your .env file.
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python news.py
