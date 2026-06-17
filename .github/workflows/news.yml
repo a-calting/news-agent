@@ -3,9 +3,18 @@ name: Hourly news agent
 # When to run.
 on:
   schedule:
-    # Every hour, on the hour. GitHub uses UTC; the script itself applies your
-    # Europe/Paris timezone (including quiet hours), so no adjustment is needed.
-    - cron: "0 * * * *"
+    # We try several times per hour, at off-the-hour minutes. Why:
+    #   * GitHub's free scheduler is "best effort" and quietly DROPS most jobs
+    #     scheduled at the top of the hour (":00") because that minute is the
+    #     most congested worldwide. Spreading attempts to :09/:29/:49 (and away
+    #     from :00) means at least one usually survives every hour.
+    #   * Running more often is safe: the agent remembers what it already sent
+    #     (notified.json), so a story is never pushed twice and the daily digest
+    #     still fires only once. Extra runs just catch fresh news sooner —
+    #     close to when it's published, instead of bunching up in the evening.
+    # GitHub uses UTC; the script applies your Europe/Paris timezone and quiet
+    # hours itself, so no adjustment is needed here.
+    - cron: "9,29,49 * * * *"
   # Lets you also run it on demand from the Actions tab ("Run workflow").
   workflow_dispatch: {}
 
