@@ -1,14 +1,5 @@
 {
   "notified": {
-    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNDNHbXhwVFNxeVpCSkxPdjEyZ2pXQmpvMEZiNmpjQk40WklaellHZXBMNGFrQnkwLWlmMmZCcGI4amVtaTRnRVNwOXRLa05LQmN6czc5MFV3a1FyLXVXcUhmVWRiX3NONlgtTDNyN1hRVUxyTU1NMjUteGpjSlRrVTNLWERjcG81YXRtN2RHYUJROEZfOFN6amRVWVVlLTRnVG5hOWN3VmRpUmZBZjJ6Tkt0eTB4dw?oc=5": "2026-06-22",
-    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdDJ0R0cwdXRrNW5vZEtKODdvamxGT3ZHLVNTWjFjcDdfZmN0Ul9lbThxbEQxcGtOODRZRFcwTENFVjhtenJzOGJUTEY1cWZDYUR0TzFlMmE4eWJBenlLMlJYNzNhRUY0cXdST0xTalktcjFpa2hUQU56MDVEYzFNTk5DVE1oeDlrQUxTaFZYT0VsSFdFZWJwczFKdk1hY1c2MlZVbmtMX20?oc=5": "2026-06-22",
-    "https://news.google.com/rss/articles/CBMiswFBVV95cUxOazNlRkVyN2RKa3JQOWxWY0c0VURWd1ZwRjkxZHR6TlNzZ3JVbVJJSWs1Tnd5OFBBNjJoTEJUT0p3ZHBNRThud1BJNGswTHdVZ3kzQS1oRWtRQTVCbmVwYTFOQzBIQ1hydFR3VHpDb2w5eDBZcWlNYVM2bm5PUHhwWlZsWmVMMi1FU2dQX3hsa1RoMzNiejRPOWZxSDdFQXJ1a0tISlFDd1hQazNaRmppMGtyYw?oc=5": "2026-06-22",
-    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNamVGNUNCekRkV2ZtMU9IRG02N0FjajV4eVFfeVFzb1JHRzdudjlNNmQ3MGthVng0QmNiVmFrQWl0T05iTkd6bllFTW90dl9oblphQzZNbzdjZHg5Mk9NSHNpaTBTX2RRUE9TM09QVEpPb3BFRGZkU0ZuLVhlb1BNaklDVVNjUVFNcFdPRjNJN05vMmRCZVRDX2FkWTZtb2pRc0ZGVkF3MEY1RXM?oc=5": "2026-06-22",
-    "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNm1jMzJqdUExcVZSajkxX19VOUFqVTBMN0JkSDZvcHZXRDh1dUZUdnRtOU9rQl9rVFFNaG1Rbnl6cG1WNDdGOXRuQTVrXzNrMmRQTm9HQmxXRWMzZmdQRWE4YVl6VWRjbHd1cXBObnRSZVFvOFp6ZVpPbG03aXNKRFdJb09tSGpUemlSd3lwY2xKdXJEdTBXNk43MkRENENieWxZcUNOU2FubTRaMkhSRENhcWZZd0U?oc=5": "2026-06-22",
-    "https://www.bbc.com/news/articles/c3vy3nr63gxo?at_medium=RSS&at_campaign=rss": "2026-06-22",
-    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOT1hWWVlGTTY4VjRGaWVNOEFzbE85amxQc0FWb3F0bU0yVG1SUmhHOUNnOHpIRlllSkt0LU9kQUE5VllEVkFlNmRSZXhQRjlmOVFPaTlWbnlMNGltN3VfdmdQLWNCZTI2Sm9pUmRZdk1oOGlBdXF3eXVKNEI5MFVaeHd0dHBzQzdSWkNJNUtsT0ZBT3I0ejVKbFIxZDBwOHVZZlYyaHlRN1c?oc=5": "2026-06-22",
-    "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZWc2Ry1seWw0TEMxMmZzZGhoWGs2aWFVRHp2TzNlYk9zb0V6N2VmWXNtZGVYQ2RMSUFGSWlMWTFMekNvemJVT2lJeU5leVc4WGpER3ZRRjNHb3RCMjB5S1ZYeFlEbl9uTEZmVGNIUHZURUxXWmpGdFI5blJaeDVENFJNTXRRNXdwdk9FM18xbjdDV2daaDVGeGZLZTdRSVJ0M2NmbkEtM3BSWFo4LVpZQUFSM0U3azJjQnl0ajBuYw?oc=5": "2026-06-22",
-    "https://www.bbc.com/news/articles/cwy05llpjpno?at_medium=RSS&at_campaign=rss": "2026-06-22",
     "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNVMwYS0tRVU1MjdwSkNUTW16YVBINmxKMDByajJ3Sjd0V0lMd0hlZ0UxTEJkQTNNU3R6c1BQc3JiRjNfcEd6VTZHdmd6X2t5bzBlbHRFV0habGhFbWlPeXJPUG9nYmRqMC02b1NyR09SR1k4cHJDbmZPeHdrem13MWZuNl9ueEpDcENaT093eHo0RkFfUmI3RG1lZnB6U2I4SHo3bXBKd0VLSTFaenVVWjhfR183dXEzdmc?oc=5": "2026-06-23",
     "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbkNXakFCOW90OVo1RkRPcDg3Z2pHV1VhamJRLWlQU05rbzh2V1lkTzhGNlpHdDlJMDIyZnhjUS1GeHAxYWdCcGc4VGlPSVJqV1c3dnI2a3hrUWFwNlJ2cXNfenlUZDg5LUFoVnZxNXFaX0lMTFF0YnVvU0lJMGJIdGNraXhKcEdSUUVBNkNERl9RSWY1RXcySGU4Y0M1YmtlYjR1amRtS1RjQ0o0dEdfamZXTVgwM3R4QkRxbkJR?oc=5": "2026-06-23",
     "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdGJBVFZjakl1LXVJZVlmb2ZKdUtZbjdqcjg4U1BjeFNrWFhlcWN1S3hMYWtMRWgwd0pTa0k1cTJHU2N1UnEtQmZtM09jOVVpTWFXekQtWExKMUN4NFhRRHJqdkh6d0ZuTExCQ3I5Vl8wbl9tT1FTeGZaclRpaFBGQ3VxLXFFXzZBOWJ6NVlNOEQxc0pkd2Jud1dqRkRTdTF1M2JuQlpQaWh3QVk?oc=5": "2026-06-23",
@@ -112,7 +103,10 @@
     "https://www.bbc.co.uk/news/articles/clyw3rkj2p7o?at_medium=RSS&at_campaign=rss": "2026-06-29",
     "https://www.bbc.co.uk/news/articles/c992k7zk981o?at_medium=RSS&at_campaign=rss": "2026-06-29",
     "https://www.bbc.co.uk/news/articles/clyw31zvpgmo?at_medium=RSS&at_campaign=rss": "2026-06-29",
-    "https://www.bbc.co.uk/news/articles/cy4wwy0nkeno?at_medium=RSS&at_campaign=rss": "2026-06-29"
+    "https://www.bbc.co.uk/news/articles/cy4wwy0nkeno?at_medium=RSS&at_campaign=rss": "2026-06-29",
+    "https://www.bbc.co.uk/news/articles/cpv37wx03v7o?at_medium=RSS&at_campaign=rss": "2026-06-30",
+    "https://www.bbc.co.uk/news/articles/ceqdzd7zx24o?at_medium=RSS&at_campaign=rss": "2026-06-30",
+    "https://www.theguardian.com/world/2026/jun/30/keiko-fujimori-wins-peru-presidential-election-polls-runoff": "2026-06-30"
   },
-  "last_digest_sent": "2026-06-29"
+  "last_digest_sent": "2026-06-30"
 }
