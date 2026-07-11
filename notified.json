@@ -1,26 +1,5 @@
 {
   "notified": {
-    "https://news.google.com/rss/articles/CBMixgFBVV95cUxNX2tIVDBRWmhSV3BlZlQ1S1Nub0tyOVNaeDMzLS1ZZEF5UkxxMEVadWhQOUotYndyODdxbXJNcGJrekZaZ0hkcVVBdXZEY0VLRE5hdXdQQ2F3UGNmcWpQdXA5UmVBcjhxM3FkX2dLVGhLXzl2emVPOXBaaGJETTdra2dlbnJ2cm5XUDR2cFZXM2lfZmtodGswU2trRnZ3Qnd1WlRvRVJVWTgzNWFVRzYzb1NPdGttWktwY2RWZkFZZzkwQjRxbnc?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMixAFBVV95cUxPb1lLaWpjYnBoNzhYaU9oWDcxSndYanY0RnNOTWl6OE10QnBsRlhmOWVqQnVvSEs4Wm53LURPREt3QlRBX09OOGlpd0NVdFBtVUY3Rmh6ZUNCREFnTGo4VTRzQ0dzYUtpQXBDRWpoS01vOVYwRGZKdU81bjcweWVMRWZJZkplOHR2alBoenlPWUowNWJoR3ZLWERfeUhqN2QyRklnMXBia3BnZTJXcmV3cUJ1Ukx6VjFnNG8wb3pSaW5MTlJs?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQRkZDeEN2OFd5OWtVNmhGMDlWaWo4aGd3TGtiMnBUYXNCM3lyWC1la2V5REJ4YnROT1RQNnpOOG5BVXhwRm5pd1BkUjdVbkNrenh0OXFaYk1lQjJ6UWEzbVZaWFAtX0pBREJEdUlOVkdvdzRnOUppdEpwZXV0a1FIZzRhV0l2TEZQV3VwTnM4bUIxNHdVLTdiUFRvdnhmSmk0S0FjbUJ4SnZuZklZcXpFVFVpMDRyRF9ULU1WZXZnMExicWs?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORXpMemJHeWdSem1ZSTR1aFZMQjgzNzZna1VrRmFIQVVkUkQzVUp4QzV1LXBhUjdOVHRWWkF0dHJyc0ZIZDhmUXNMYjVOZWs5dFNONVEwUGJmQlFNYXpLalM2Y25NMjI5UXVMNzhaMmhDaHVQb1VvMzJGZEFSMUxJN3JhWllBVzE5RFZiVzRhUks0MlBuXzZBaTNUM2QybVlyNUlabG9jekdSN3hTR3ZQZGxheTJ4ZXVGRW9lMG9VX3JOQQ?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQM1dpenBjM01NWi1iUlVVUkZrZEg0ZnNrbHhQTnpSZVYwSlRrLVpFRy1ZbzZNblBHZTR1SFVKMTFGVGZQSTdrY1RIRXRoT0NwVGJDT2dYWDBibmhLOGo3ekJsSkw4TkNuR3hkRTVBeDY1eG9lcE5paDJFdUNZYmQ1Mk9zSkRiS2dRWm9LX2FaWFZkX1NhR1VPSlJTRTZrRlI0Tm5VS2Y1dWRmaHpwbERxUkpWZUEyMUFIZlpWenFnSFJ0SkFLYzZxZVlRTWg5ejBlQUgwcUwwQkRmTmcyMUlGVXJB?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxONU1hNlBDTURsc1NhcHNqODU1dTRDdnVLOUladWNPbTBGTUVVaDlzbFRVUU94SVVuM2w2c3E3Zjk2b0hUSVEtZk5tSkxoVzRRWDNsWjd0NmE0V2J6NnJGWXhoYzlETDdfT3VGaGtLaWhfUlFPc3JPYkM5djFBM3ZuTFZCYXVpcUpKcUt2M1ZueEpEWm9SYWNFdzE0Z2FCek1Qek9JM250M1hUUkNQTHVIUksybURObjJT?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdTVXLXIyN0poOG0tZUhzUFUySmtfdVdDRlNUREExRjZnbUZzTk1PMlZhMXNNOFlDdTlMaDR3UmZQNV93LWRHQlB2cFl2V1cxNHNHX2NvTFEwdGNwSF9SemJqNHRGMkZLeV83MzUxM0RZbXBWM1FhbnpGZXlZMnY1S3J4SFdOaWwxc25Oc0h1STUtRG5zU1EzWGZOUTluS2xEdWN4UWFEeGU4dWFoYjhXaEc5MUg?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVkJTWl9mOFBvRF8xcGtOSVMwdGpLb1U1U2xKYnFRR3c2MDBGdmxJc3V2Wkl6Tk5EU0laZjBOUXlvVFYyajBUbXNGSWxhdC1sVVZFWG02NVFzQ3RPY0JTMURBcFVEaDF5SEpuS29MS093UjdMOGkxTEhKUTMzN05fM2plUnZ0c0plR1F6YXJpUnJEVWtnczFZ?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYlNORER4TFNoTzY4QllxdldxUmRrcG0ySmlGZm56YS1UdjY2WU1IVmxBbXBnQWtCcDlGMmpDUEFib1hIS0c5b1FnRFFoVW9CM1pONm9pYlR0WlpVYWdDUEMtVDR0Z1JsS0tMZ0hyaV9rMkNQOVpLU3lqbkFWaXRtYV9VVUNVVjliel8zdlBaUTNqSm9seU5Mbm0ySFp0WDRNcjdDaTFuNndJMXFfTllXNEktb003UQ?oc=5": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVVZxVjROc1hRZi1IcXp1V3JFeGRrU3pCaC0xenYzX1lRWnc1b2FhSW94cElyOFFSM3F5Tkx6amhWQ1ZvaDJzVVlsOHdodUJEdTk5Rm1OODJhV2doa3Z4SUxMTHZVMzRNOXpQMHF4ZVlFS2E4cHhVN3VNWS1Oc3AxUmtQV3FnUnZ2dUZxNm1YRTQyV0M0TkQ5Q3R3cjNhLTBxcmxZ?oc=5": "2026-07-03",
-    "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss": "2026-07-03",
-    "https://www.bbc.co.uk/news/articles/c4gy603z2qlo?at_medium=RSS&at_campaign=rss": "2026-07-03",
-    "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss": "2026-07-03",
-    "https://www.bbc.co.uk/news/articles/cwy0wy0nenvo?at_medium=RSS&at_campaign=rss": "2026-07-03",
-    "https://www.bbc.co.uk/news/articles/c36yrlzew39o?at_medium=RSS&at_campaign=rss": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMixgFBVV95cUxOMHh3M0d0SElCckhhMWs2TFFSNmRUT0t3RjY5MnVvb2xYbHdlY3c4ajhreklDYU42cVpoUkVYcDg0S0VCX3YxeDBOcndzd3pCVHJmcWZjOHFXdERnU1RmTlF4RDhxM1RqUXFVRVNQUkJLOUhVazAzc2hFeGlybmpFX3JieTI2LVBnMkJTYWxLb0o1WmE2eW9XMHNUYmlla2RMTHZtM21NczJkZVVUTW1seGUzbmJMRWlQS2RQOF9ZbFFDdWZEY1E?oc=5": "2026-07-03",
-    "https://www.theguardian.com/world/2026/jul/02/venezuelan-man-pulled-alive-from-collapsed-basement-eight-days-after-earthquakes": "2026-07-03",
-    "https://www.theguardian.com/world/2026/jul/02/canadian-boy-dies-rabies-bat-on-face": "2026-07-03",
-    "https://news.google.com/rss/articles/CBMiygFBVV95cUxPT3pGNkgyNk0xSEpvVHlhQUJqcE44RGRFTzktQVZRUVJORV8xXzhLVVlzeFo1Y3lrajljbWNWcEVjQm83MXVYWEJaNjQyNDFYNHR1ajlISDQtZWNiSVl6YlBGTERfQWt6eXJrOS1VSTJoNFlFZjBrQkF3Ty1XLWJicEEtZURXS0NVdVM3X08wVVIwTS1MOVV6MURRYzNISG1Xd1lBWmZJRTVrWm53LS1heEd4NThsM0tzZEVGVlNLRV8tZUhLWUMzdmJR?oc=5": "2026-07-03",
-    "https://www.bbc.co.uk/news/articles/c1mykzj15xno?at_medium=RSS&at_campaign=rss": "2026-07-03",
-    "https://www.cnbc.com/2026/07/03/the-museum-of-american-finance-opens-its-doors-in-boston.html": "2026-07-03",
     "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQ0RBRmlpN2UtbDdMQUpmZDNuaXozSW1uMm1qWTBoT3lWc25yamFFUklpYW81bFk4ZHY4cVVqdGtIU0o2bGlpeldFcjJ4b1d4aGxxQTlzS1R0T2JxRXplR1M0MGphWnpTdVFzcFJQUGFPVWhmNUFISVNHSURvYnpOMnBUVVhHWlpOekJNUkxKS3N3cEZlYUlJZzhScllvc29yVFV6UmFNa2Q0cGRqQ2dkSUhERHoyS1dxelBGVS1NM0lwOE5iN1VZSWlxaXUwZzdtQmFGenJHaVVKalE?oc=5": "2026-07-04",
     "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRzAxMTBzRDRicVR3clBwVkcyaFNnUDVRUG5QbzJUYnZQOXBZNUg5SkZMNjJGYVZSVS1NN196NW5OdzZnYUJuaEVocVpLOHQ0ZDhqWE5qOGVyWkFvSHdNbnhfXzRsTG9hV3RuZkl5T2xReXhfVVZiREt2VElzU29qaUFzRlhyTVBGd2tIV1RSVkpxTDFhTzNETkp3?oc=5": "2026-07-04",
     "https://www.bbc.co.uk/news/articles/cevlkzer7vdo?at_medium=RSS&at_campaign=rss": "2026-07-04",
@@ -159,7 +138,10 @@
     "https://www.theguardian.com/global-development/2026/jul/10/developing-countries-spend-more-foreign-debt-education-aid-cuts-unesco": "2026-07-10",
     "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVDVhX3VqUkM1cjdNT1ZPVHJaLTVjOV9vYW5tQjdJOHp5QVR5bEt4UGxVWDZucnJKT0kzZGgtSnIzZ2VLVnFaWF82UTVhb0FfamxtWF90Wkd5SG5kQnVMT1BWQkhxNHFiZ2xQTGo5cE04aGMzbi1KUmEzeEVVT3dESlI1YVRRVk1uZ2JsQUNaaXM5SHJIM2xqUUt5b1Z4SjAydjByYVNtTG14dk1BXzhhUkd2c3RmN0lDQmltUUU2MC1zTjRIbnc?oc=5": "2026-07-10",
     "https://www.npr.org/2026/07/10/g-s1-132396/smartphones-taliban-afghanistan-ban": "2026-07-10",
-    "https://www.npr.org/2026/07/10/nx-s1-5887357/israel-gaza-war-trump-ceasefire-military-control": "2026-07-10"
+    "https://www.npr.org/2026/07/10/nx-s1-5887357/israel-gaza-war-trump-ceasefire-military-control": "2026-07-10",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTzc3RWxTLVZuRllmY19VQ244ZjcxcjY2TVRNWnh1WkI1ck5qUkFyMzBZNTZTYUZqbTVRSmc4V3BqMl9zY21GdnJmSGU0OTNRd0Q4ekxDMnlGQ0I1UEJScFZhUGZoZ1A1aEdZTWRYZ0FGazJ3aXpJd2Zad044SzhMWXFETXRmQnBvTnMxSjhzdXVjZnp1YmRkNWJlVWdqWWdFdnRKeHlrOFQtdjZqRk9mMFhMbFFHUQ?oc=5": "2026-07-11",
+    "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOeUVORnVJVlAxZ1U2R2VGdy1UYUFGeU9OWW16dVkzb0tTUlo5em16Z2xzTXBTUlZTNVRnNXlQbGdrRFF0TURjLWJ0SUYxRHdpM1o4ZFJhcEgzNF9OWG5hUHR4YTRTTk5PY1Y4VFdJVEdkalYtVFd4eEtKb016TUpOekFYRkp5SU5EM1N5ZXY1TWJSRDlnMEZWTzVRYWg1cjNzWm1HZUZicVp4RnM?oc=5": "2026-07-11",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxOY3k1cm9pSmZSWW94aGcyM09sWWdadXpEWWZBbGhFTjlfWDFkbzBZV3o4bmpycmY2QmQyelNrUVBFUmRLY1FwMS1XbVl4NU0tNGxIbmplTEstaXFlQV9na3IzdHd2YUxMNzQ1ZXRvMFlmQ05lR1gwT09oYXIyWkV4aWJDdEE5ZnVDMFVMalpnNjZpNFNfNThLR1ZEeGk?oc=5": "2026-07-11"
   },
-  "last_digest_sent": "2026-07-10"
+  "last_digest_sent": "2026-07-11"
 }
