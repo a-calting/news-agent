@@ -1,23 +1,5 @@
 {
   "notified": {
-    "https://news.google.com/rss/articles/CBMiywFBVV95cUxQQ3JwZUswZlN6QjJVOW9LRW5Da0pEcmxLMGJpTm1ZaGxUY2ZJSTRGblUwMFBjMndCSlVsQW04WGdpNG1LRzE3algxUkktZ2dRT3VNTTcxWUNKUGxyRXRqYkxGSEZ1a0hoaHVxajROZkVZVkFnSGkzamV6c1M3enZ5MmltZ0NmZjk2ZU1xSVJiWnZTcFJjWjRYTXJtdnJBT2Rja2NaOV9IR0Q2akNPR3ZQYlROQ0Y5QVFJV1V4ZVVuMkZUVTYwN19OZmh3WQ?oc=5": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/czxq4ge246wo?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/c0jy3pd2jzqo?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTlNHTUNWUmpUMkRpM1hXc18tcTA1UHdJOXloZWFPX0dicDB4SUhza0d2YkRfekxLV0VGSmtmUnJHMEYwaldqcldJM1JYZDVRMTY2VWlZQ21LZEVKNE9rSWE5d3ZCSTF4b0d0ZmJnWEVmZjNPZjBMNUZBSEhpeFIwR0ZteEZUd2VzVWk4eGlZZG1WN1k4X0tRUmN1QjhLdE5SdkRpb1U0ZXF6TU1uU2ZHdmRQNFVQVTBHY1JB?oc=5": "2026-07-09",
-    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRkdEY3BmbTM0Rm41SUhUbHRCWHU2VjVCWUtMV1FCZEU2WGxYcVdIOGQzR3Fsdk9wTUpxYktaU2cxQ0RPTWpQNVhTaEE5aXZWYzMzWDdZQVVmdHE1cDBhZXFsMEpTMUFSVDdac0hrVWM0QUk3ZzBMOVh0SGpvWW1ITEVNQ3RZS3BVZUFFajNiR0JGUVdZX1VJMGFZMkVnOU5kOGx0S0xmU0NYZ3hzYWFFeWc5WQ?oc=5": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOU0l1cEJNcjlUQjVYcXFjUVViTThKdnVqSGJMTUpEM2Jqem5HUGJyN1VvcEtyQUdrUnFBYWFhNXB3aEFUX2RmRHhCbXJxQ1JhX1Y1RXVyZUp3TXFlY1RFRXpLMWxHQnlQa3Q2OU1wekRWOEY4dGVzNVhQMnhYd1gyVEM0c080bUdGY01KNGJ2RW05MnlQMER1Q21EeUNfME1TVTh2aFk3TFZqMnpnOFowUzhmMWpXdUVHTmJtaXE1VkU?oc=5": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/c9v229434p2o?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://www.bbc.co.uk/news/videos/cpq309jrve4o?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQaEw3T3U5RHNmcmVFb2VhWGdmRExEb1VHVFYwbFBsX1UxWGlJRW5pM0R0NGwtQVVlUHAwckdpcHIyaXZ3dkFTR2ZvV3JKams0TzhvQ0NYVnRkOFlFa1EtR19nVHFDcTJYQVYtaG9wYWxoRjlaX3kxeW9tdTNkZ0d0MGpVNjljem9DRTJaN2pSTmtoMEhJd3ZFTzlMTmtQOHF2WWYxSVpWNmwteWZBVG5iY2F4ZUtHZw?oc=5": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/c621k5r8764o?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/c70yd1g67z5o?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/c9q29j47v9ro?at_medium=RSS&at_campaign=rss": "2026-07-09",
-    "https://www.theguardian.com/environment/2026/jul/09/species-ingenious-survival-strategies-no-match-human-destruction-red-list": "2026-07-09",
-    "https://www.npr.org/2026/07/09/nx-s1-5885040/robot-flying-aerial-aquatic-mit-birds": "2026-07-09",
-    "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQmU1RWZLQTAtSENET3ViQ2QyZXpsSm9qajQwakg2clBSVkdvdmJqM2UzUVBJdUpfRWd0Zkh0UEwxcmx6YmVTYWNTNUZhOFFveE5qZHltSjlDeUdYcnEySE9VaVB0QUJibzBkS0FFc0N5UUpZN1dHeVpINjgtek5HS0VhSDRyc0J0aU13X1FfUnpfNTgzTjd1ajktR08xbzVyNzhUMzUwaXhWck1VUm9waW9R?oc=5": "2026-07-09",
-    "https://www.theguardian.com/world/2026/jul/09/lgbtq-cruise-ship-refused-entry-egypt-turkey": "2026-07-09",
-    "https://www.bbc.co.uk/news/articles/cq819y09g2lo?at_medium=RSS&at_campaign=rss": "2026-07-09",
     "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWkxtXy1vTHhfbERRTHloS3VqWWRZVHF0MFRmb19nWDFnOG5HYU9pai1zYWx4X0pSYWVXQUVjdVJfWlMwY3ozdUhGcHd5R25WWUpNWDN1dEFCS1paLTZhRjFzWkxLRDdWTDAxV1dlMGllWDY2OGRYLVVVU0VETVF1cDhkTzUxTnB0RGpfekdvSzlBNENyYUNSRDkycTE2T2xIU1VDWVlIMl9DV2MzWnl3RWtHZm1Ld0pWTG42X0QyeXhfYlpiRUE?oc=5": "2026-07-10",
     "https://news.google.com/rss/articles/CBMixwFBVV95cUxNekhCZ2F4SGtjYVBVTG8tZFJ4b1VyeFdyNHpZdW5SNFg4SlQwX3UyZjRKQlNUbzd6VTl3eXl5cUpKTlM3NzdzTDI0b3VDNE84TnZwSnFDcUY2MmJZZEg2NWJLSW5IZHM2SjFVYno2ZE9FV2dIU2gxSE51ZWd6aGdhQlRhTVVfWUFoV3JUS1hXemNmWTBYM3Y1amxHdHl0MUxQM3JQbGdncHFVeVVnSDZ0WDNqbWhSR2FnX0lYTW53RjN2RDRYNWpr?oc=5": "2026-07-10",
     "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNUWJBa0kyTGdzY2dqcmRCRDRBZDAtVEZNWXVGby1CcDdYVjNFRDFPamxPbGRMaWd3NVg1YVM1eV9hY3lvb0E1eEtVak56dDZjY05kdkRwbXdZbzdwcXVtQVhpQnR6UGp6NzB3MDZWRWZ2dFRwZ0NJSXRQQk1SZHMtZXZNTTBEb0xhc0xWN2x4ZVdudXpGZnQ4T0NlbmtRTUlkcjcxZE9jX2xRcjlHQjJQc0tFV1F4VnR5Q2lrYy01VHZ2OWVkWmozWjVjWkxCMlI2WTFHQ1Vn?oc=5": "2026-07-10",
@@ -195,7 +177,10 @@
     "https://www.theguardian.com/news/2026/jul/16/morocco-intelligence-insider-reveals-widespread-use-hacking-software-pegasus": "2026-07-16",
     "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUGI2VTlhcVZDeTFzdlRiblJQdUhDSU5nLVRuNFJWdHZhZ3NjNF9OYWs5TDNfUF9jQVdsa1lIdWJUQ3Bub29ZQ28xWHlyUURrZnFnVVMzQkI4aWNCblVXUUNxanFOakIta0VEYlZZYWJYWno2SjRCZWVaNl94cEhfa0lEVlZnV09SSVBxMnI3R1F1WjZmdXFpNUhwWXhSbFU1X3VNRFB3QWNrdEU2RTNIVWI4eTdOSzhDeTdrOWNGbnVodw?oc=5": "2026-07-16",
     "https://www.theguardian.com/global-development/2026/jul/16/uganda-travel-restrictions-last-ebola-patient-discharged": "2026-07-16",
-    "https://www.theguardian.com/world/2026/jul/16/how-global-heating-supercharged-floods-west-africa-displacing-thousands": "2026-07-16"
+    "https://www.theguardian.com/world/2026/jul/16/how-global-heating-supercharged-floods-west-africa-displacing-thousands": "2026-07-16",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQXVvLTBxWklNRDU2M0l1QTZhUmloM0xqbFM2RWwxaS0yckJVNXZTbkFlZDBQUHZHbDVfOGRDdlNlSDJQNUg5VnZodUs5MzdsUjQxZjFyZl9LaTdBbGhxWU16dk9kRXFKZm9OblFOX0NKNWdweGI4UXNLb0daSjNzdGVmZFJzRjZHUzZFWW51OFhXVjNpeHk2SUs2cGhNeC1VMWxsQVNjWkIzTlFBTjhiRUlrS3o2aDBWb2dCOFlHMWVBMFdt?oc=5": "2026-07-17",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRW1QZlpEY3pwOHJJaDF2S2JVZG81S2xuakhndThpb1lLREpreFBCRW1TWTlZeFBGTFRaUER1dWRUU2FlaDlYTU9Yc0hzY3Juby0xSlRxN24yMGZvQ0ktN1NYcjVtZHc5a3F6UXQ5Qnc3aWNDNV84MV8ybWkxemptWEtlS1plM0kxQVNoM3A5RkpkUlZGSEtYbVVTN2RtNkhwc3VWZThNazhDTGpt?oc=5": "2026-07-17",
+    "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZVpoVTlwUHY0LXNXd19nbFlNWVZoWDdQeVVFSi1ISkZzYVI1YUlzQTR6OXd3XzNhWDhsaTRkdnByczNqMlE4bm1JTHhyaEk2VXhrUDRFdmVjdHN3RW9FZU1OTW5aMnMzTmk1VW5sMUNGTkhYYVc1LUN5bUJJWkNBdUJFSU0wNUZyMDdtZklkRkJPLXBTRlhHQmZ1S1dQSVdTZ3l4OC13TE5aVWNBSUZfeHpfRVRwTG9hdzFKWkdVa2RfaVoxeWpr?oc=5": "2026-07-17"
   },
-  "last_digest_sent": "2026-07-16"
+  "last_digest_sent": "2026-07-17"
 }
