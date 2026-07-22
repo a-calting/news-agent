@@ -1,32 +1,5 @@
 {
   "notified": {
-    "https://news.google.com/rss/articles/CBMixwFBVV95cUxQdF9iNjRwdm9pODdabFB6TGd0b0llZjQxY3NDQWktelE1c2NnUERlYUs2TnNPc0JBaFZvWlZhM3VfRUVwTV9MZUFteVh3VlV0QVhfZi1NUGpQdEp3elpuYnFrVE9Yb1BzNmtGLWdiYlJ2THBOT3NrRmppdG5mNWFVRDcyWmFSRHJzWXJyVVpQYy16cVZKb1I1UEh4eFdYN1VURkFtQmNVanhnM2I4Y3JSLXhHTmhOMXBmSTRMZE4xam5CSlN1eGFR?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMipgFBVV95cUxPR0MxRE1KWWs1OXh4SkpMa3dwZWQzSEhxMm11YkNzX1diNFJxNWl6TkxBV1VNczl0c1hheGVMT0l4UVpFcW15YVotc3ZrV1E1bi1TM2tHS3dfdTN1YTJpUTVLdG95RUpELXo5dm9GUFNKSUZ2ekdNdHNfZ2NLQlRyVV94LVhsbVVLSWNvbndVbmpNWTJiMEFlSzBLVDFoeFpXc2FpRzJ3?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM2RCTlAtbmVLSG1sQjJCblpURk9nQ2JPWFpoR1dKNWJxQVVZNGpRM1hGSEFKa1VQQy14UnhtcTFOeGswVUhFQXJ3ZWRyekU4NXNzaWhPY2xyN0JoYVg3bnFXTURPSHUyYTZEOUZOWDdIQmZMTVlKV0RHU19qNjRwUDM4NFVZRVp0YnBETnhwWkxKVkpEMHpEY0ZKNEFqdzFQNjlFRE5uMUNyT2hvSXZvc2Q2Q2lIT0l1?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYkFWaF9FeUJLYUp3RTFEQ2EyTTdxdlpIeWdlNE54WFRCaERjTHpTLTNrd0h5aWFsWmJjVzBEaTZ2Y25KdHNyZlBSX2V1T2VTRlRVNEZjdWhwSGx5WFF6SmdBek5HR25HZEQyUndjX2FhOUVmTG8zZGNwYWNJeWFRaG9FVTVYdDVHbG9rM01FTnphc2hFeFd4ZVNtbw?oc=5": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/clyxyzlp9p2o?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/cn8q0e8d4ego?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOaWNSenA3YmJ4c0NIekxYZng3VWNRNGJpNlhpc3VRVmd4WDdOcnhsbGdxQ1VKLVNHOEpwdzdyVTd1SkRvVnF0TUMwMjdwWWp1WkVldm5ickV6QWEwaGlreGNJRmJJNGRvaG9sVE9IVWRXTk9rck1wR0ZLV0t6dFNPUTFQRzVKTEotVFRpM1VuTkhKS3U1bTZCcUt3SllvRWhONnJKOHFBLWo4RVAyTHNJdVV4TDYzZ1JQNEJYSl93eHhhODg?oc=5": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/cp9ldle3d3xo?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/c5yzy0lpello?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeFRpUlZLUmVQVTQzWU4zbzFlbzlQN3pOemhXOTV3eEtBenpZR3o2STdWWFdvZVY0a1g0bHhHNVlsUDZHUl83dGptOTJEWkt1djBTbldLdUxpUzBPZEdBNzVFWlRLVGtBVjNOXzBFVjNDRUhDaDY2OGtkbFVHVkh6MWVZYW5odE40ZU9fT3dMWGhzaURvV181ZUJIX0E2MnlZb1R1ZjlQOW9IeDJYTlktdnptYUJDSWFtNm1qdG5qbnQwUTlW?oc=5": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/c2ly580kxnko?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/ce3e3nqwr5do?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZ0hwdkFXSVNkZmdzUXllTXZ4QnhLajRNV3pJTm43MmFoSGcxUTBxU0xNSWJiVnVpVkNUMGdkYjlHVUtkVzFvT3h1YXd0Y0RLZXBqYjV0bmVnRFpXV2tlUExxejRCTDVFQmxDUzdJc3ZHNUhkbWczZnBTWVB6WEYyWk15MWxHaDVRVWZUZ0JGWC11eERIVExXcTFLd2VZM0FvdVlTT1h5YlZKZlM0QkpaUEFldm9BMFJYS2hBRTgyQQ?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWS1QVGJlN2hlckxaMDYxNmpmcGM3S3RaZUotQzQ0U2xvNWhBdUo2SGpUUTM3a2J5WUNGWHo2X1VUSjltbjJNbUM2TlBRSDlPZ3o4V0t6NnZIN19kbllWZlY4OUxaQnUxenhaV1BXLVFMQndNQWJSalRwSXdiRzhXdDlEMFhob1gtRjVqeXNKLUhOd2xGYUp4ajdBb0puSDg?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRUpBR1JrMFdtWlR2R1ZvZjRtU3B1bVg4cVZMMHRoNTByc1d4OF9xdmdrMWlOcnhiQ0JDaG1TMG5kZUJZM2RDU3VWN1Q1aUpVOU5pUWpNdUtSMV9VMzZ0ckp2RE5idjF1X0IxZU9WZG1kVEVSUnI0VWNHa29BcUVLRFljeUluWFhCcDlHVkFLVjB0RjVZSmZ2M3J4Z1J2N1ZISTU3b3RJN3oxNml3VDRyeEpSTi1Od1hvT3JhdTduNks4UQ?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUGg5NkVYV29DZzNPWWdfQnBqVkllT3BZYlpEMkZEb3JmODhYT0JYMVQ5SHc4cEZoMUh5bnp0TC1ITl9JZ1d2VmZ4T2dFcGY3TDVsUFJhbVdpa0w1LUdFM0M3WU90VXZFWnY4QkhyeUc3SmtlQkJYb05OUENvQWxwU2ZnTkVCcTZyRjh3UUtrYlhMVWMtTmVSTmlObnd1SEhsUk5uUk8tLUdEZ21faGhRc3J3?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMivwFBVV95cUxOMGppX2RzT3p4QlVHSGtCdHJjamFweXQ2dkVZR09reTZvdWZKR190WFRabWZ3bWRyN1BWT0doSVFVeWNFWHRza0RublZySVN5NGtrOEhadGs1RHF2QWEtZDZYQzR0WWxMZWdBalZkYlVEN1l2X29kU25pNzZOOGhVQ1JzVGtZdGVPWDZzYkVsVlpqZ2RVY1ZFVEdMUFAzM0gtRklTZ2daU1FtdEl0LTNJY3ZwcmVvZ1Uwc19uSEYzZw?oc=5": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQXzZONzhvTUUtOWRsb2xhQzNoRGJBaEd2YWRtODkySWl0c2lNbmNrV3p6VTlkMG1VclJ0NFdzMVFhQnY0TnlwcHVzTkFXdW5GV3lfUlIzb1Y0RTVzNk54cjZvV2lvdjZ5U3hsVXpiRGVTR0tBcVN0ZzlOZzV0RHEtam9PdF9VV0lhQUo2YUV5T05FUGxwWW4yWWNVS2wyVXRZbmJ1anh5Sk4?oc=5": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/cy0608wy8pro?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/cqj1jqeyl5ro?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://www.theguardian.com/world/2026/jul/13/mexico-criminal-complaint-migrant-ice-deaths": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/cly8yjnw822o?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/c2dydj1wp93o?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://www.bbc.co.uk/news/articles/c0qyq800n44o?at_medium=RSS&at_campaign=rss": "2026-07-14",
-    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdmZIVjNFOUNqLVRsTkNrZ2lrel9YalJjNjJnLTZLUnBLV2Zxem1Yajh4N09TZkl1eVJRX3RqclRNcGNSU1pkSXZUbTlLV0lmbUJGenc2a0wzOEIxRFBmNDJrTWNpWGhjSVd4V0lsbWdhMzRBX0ZUaklndHdwT0hlWElyX01qcFFWclpEQ05YRmwzM0FRd29KTW83T0JTRU9jYV9sWmZMZllxSFltaWZ2cFp3ZWIyOFlh?oc=5": "2026-07-14",
-    "https://www.npr.org/2026/07/14/nx-s1-5893379/inflation-economy-consumer-prices-federal-reserve": "2026-07-14",
-    "https://www.cnbc.com/2026/07/14/warsh-promises-inflation-will-be-a-thing-of-the-past-cites-benefits-of-ai-investment-boom.html": "2026-07-14",
     "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdUJKV1JvT3dFQl91WmJ2RXIybVNSbml2QTkxUDA1Wl94cW9GbngwLTcybDNab1BraG1wcjY0bTVld1pNM0t6Qml6cGJuZUhUOExwYkp5aW9MY1dYblpSZXc0REZkNTN3cUpib0d3Y28xazZTV2tRZm5HUDVXODBjc2FXSjhhcDFBUjhWZzczUHdHTW5fQzFveTlfWkFGRXlVVmpZakFDOVpWbm5fXzk4eV9MUjlHSU1xT1E?oc=5": "2026-07-15",
     "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWEg4YVdVcmlIS09oVF9uTjZXM0tma2s0ektRMzhMUldYM1dNaFRBUHNleHV6VjBZYWsza2NZS3BjVFdWSUp2Wk9EYTNQRm9FSmFnSlEyVWx0dXpKb21Zei03dm1BcWZud3BLdzhkWlhXdk80WG00WTBsVXQtbFVXZ0Q5ZUxWNUZMeUxmQms4ZDUwQjRnYzRjNEttSXk2c0FjNFNiNVo0c18wYjU3ZkMyaVYxRnZDaXpSQVVEZQ?oc=5": "2026-07-15",
     "https://www.bbc.co.uk/news/articles/cd959x4edy8o?at_medium=RSS&at_campaign=rss": "2026-07-15",
@@ -211,7 +184,10 @@
     "https://www.npr.org/2026/07/21/nx-s1-5902084/avocado-oil-health-fraud-study": "2026-07-21",
     "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeF9QLWFINjhzOURra0RyaFJkYW1RcGtWSWpWT1hrZ05HWEh6V0lkeS1qejBmT1RfVndkWHBjeUR2cGdoYW9oSENncXRLRkhPcktxN1hGdGJfdmhvNXNsVDBiMURpNF9tUUI2WDctN1BBNzZBLS1wX0NobG1ybHk1YWNtQ1BrTnJhU1hzY3p5WHpjRm5xMjIzOEVQRmxxckE3Wk1RWUN3b2NKdjh0Qldteg?oc=5": "2026-07-21",
     "https://www.bbc.co.uk/news/articles/cyvl35z3917o?at_medium=RSS&at_campaign=rss": "2026-07-21",
-    "https://www.bbc.co.uk/news/articles/c1m1rr90dzxo?at_medium=RSS&at_campaign=rss": "2026-07-21"
+    "https://www.bbc.co.uk/news/articles/c1m1rr90dzxo?at_medium=RSS&at_campaign=rss": "2026-07-21",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQS1lhdGlVLWR2R3BlMWk5dWxmYlJGM2Z4N3ByZ1BVblcxdGhobnpESzVMcWxKYktWd1RQUmZrQV9kUDVJbUFJOTJwRXZuakozVjlMSk9qR25iejlTVktTTEhxWDFNU1VMYkd1ZjF3SXZwMkxSS0FNdXhDcEFSeEFGTGdHb0ROOGx6cURjOVBiUEhVZ3F0STM0TEwxSWw5dHg1UllLTVdwNTk?oc=5": "2026-07-22",
+    "https://www.bbc.co.uk/news/articles/cdrv0p37k8jo?at_medium=RSS&at_campaign=rss": "2026-07-22",
+    "https://www.bbc.co.uk/news/articles/cq56l9p4y93o?at_medium=RSS&at_campaign=rss": "2026-07-22"
   },
-  "last_digest_sent": "2026-07-21"
+  "last_digest_sent": "2026-07-22"
 }
