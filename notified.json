@@ -1,11 +1,5 @@
 {
   "notified": {
-    "https://news.google.com/rss/articles/CBMivwFBVV95cUxOYW1YaE5VZXdZbXVmcVlIMVBDRVFZNC1BRjlmSmplVHdSbXJuX0c0eTJPTkVVeWZZME1kODNrVkV4Wi1ZVmRDd1lTV1h1WDJoYmFKVzhtZDRrRmpub0hPV3RuZDduM29Bb2o3QkhnRmJBZ0tydnNrZGFTLVppWFlBNk9TdHc1QnNRd2h4X3c0U2hyWnNXa2dJdkVTU0FsZ0doNjVFb0NOZHNaT05KaFc3SVpWRGptcUZXTVE2Nlcxdw?oc=5": "2026-09-18",
-    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZngyZ3RoMER3Sl83bUtlX2VfdUs0Z3pRR0l5VGRUR2dubzZucnRIbW5oQy1zS19ZMUdLLU5neTc0eU41WUpwV05tUVh3Z1VFdXhpdklUTmZLNVVkMTJ2RTQyaG55clRYR0hZV3JCdGZOMFZXWHVuNVdjR2NxMF94a1FlY240ajRkSWdTaTNSelNuZUFmOW9FUU9DRTl4QVo1a2psNF82ekNkbDA2WURRbnVKcDZOdlRPSTVrMmF1V2JGc2Y5SnplQzJYbng2Zm8w?oc=5": "2026-09-18",
-    "https://www.bbc.co.uk/news/articles/c6x2z4dlzyr0o?at_medium=RSS&at_campaign=rss": "2026-09-18",
-    "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMUdJX3V6S181RmtJOEJLc0lXdW5GZEttaGJRWkliUkZ3b3FtRUhwdFNFSk4xSTEtMlpXSEZ4Uk1ialhKR1pvcS14MWdsc1BTenZOM0FDb29hc1JYdHBjUEN4bkV5cGkybDNyWHZJcUJlbGwxd2dDc1dBR1dKTV8wZm1kRXVvVGdCNjNiQnlrbktiU0pNakJMREVGd3VyVndscS1SN3NKaWVQTk5sMVRvYzhfaVE3UmJRdnc?oc=5": "2026-09-18",
-    "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSHV2TTRxUXBMbWZ0ZDRSUjlKWHZMcGRpLThCNGdTbEJYQkNOSGp0RllHekdFdTFvZEtZcVZhbnVjQkdqb1RGbWVHeDRZUHRHQ29TN2dlVDFOenNhbUtMdGIwZFBKZTZFSktuRXZ4Qm91VU1qYVJLazdQY0dXMkVPZzR5ZHQwQ2dLQW9LVmxSMkpVVUpVMnRTWHFjT2haSzBkQzJlNVVR?oc=5": "2026-09-18",
-    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOVYxYjJMNGR0aDQ5aEdWbkwwT1ZkcVFfYng1eDh5LXRETHhDa2RzRHlzQzdKV0s5NlBGMzRteTNtdU5Cd28xTHVlRVdiZnZCdVVUeTl6MlB1REc0RFFqeXlGRjdjMTBrZU5zNGhJRUxqVV9jTklEZTRPSWFiSnNVUjZNWWYxRGVXS05Wcl85ZzBPeTRRYkR0Z1VxTGtxT3VrWXljMEoyY1VESnkwMUh0djc1dk0xMU5GbndaRDhKVHQ?oc=5": "2026-09-18",
     "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbl9oRmowV1pPZzBrOFVqdU5jZ1QxR3BJRXZqc2h3TFRPdTROWjZGVjR2dzVaTFdvZzFXUEY5YnBlSWg3SEF5R0kwSzFiRzItdS1Sbmp2bTlLMnhiN3hGMXNtZFhTQ2h2TjM4ZEh0T2RibVZnaXBNUFBmNlJnOF9aaDRac0lnMEF1czM3YW9TTGtWeDRqamJfMld1MkRfRXMyNDhfUFVncVZKV2FjLU5QX3hB?oc=5": "2026-09-19",
     "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWmRNUUp2UlR5SENSaVpKUFFTV0J2blE2eEE5ZndENFJYMWF2Z3ZDQXp0SVZFYkdpaWNsMkZ0cjl5Zm1TLTlTSFp5cklTNFZudGZLUjNHMGRqZ19HLUZ0Uml3UWszelZFTTd6WEZJV0J2a3ZMbnZWLXU4OS1iRWplY2JOb01FVS1QWDA5ZVlmVDBlUU5aRWUzMGZkZU9NeGFCSjRMT0l3?oc=5": "2026-09-19",
     "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbzBpLWw1RUNBVmo1R0ZpSkR0Z0hPNG52dktlU181NDhaMUN5Q0g3dDJ1OU5reDJ4MzFjb2dRVldsVkExUm4xTlQ2UzZfUWVSbkdsTkNzdUlDUWg3cFhZQ0I1ejNwb3ZzbTAtQWVXMjkxZ2xwZGRqckxTYVRneDJ0TlZqeHo4MDNGR24wQUZVZEdFc0FPcml2WllxSGVNdGRKWl9hREIyNHg0RW5FVG0xSGxkSUllSGhZYUxz?oc=5": "2026-09-19",
@@ -62,7 +56,10 @@
     "https://news.google.com/rss/articles/CBMirwFBVV95cUxPekk0eU1sNTF4VFZQZ0diQ1d2R05UZVN3a011d1JBeDJRemY1SGU2eHQwemxHcnNQa0JkLXpReklrN0FZR19pcW80NkFCMU1JTmptX3Y0UUVzWWI4YTlhMklyQ2dzbFZEaDRodUk2NTNPYVB6ZF84TkxJa3VMcUduOEtMdkdaa3ZUTS02QVFlWmhwYi1ubEtDbFRHa19Xc0hHREp2SHU5dTVyaHFxeTgw?oc=5": "2026-09-25",
     "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss": "2026-09-25",
     "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss": "2026-09-25",
-    "https://www.bbc.co.uk/news/articles/cm86xn0nnw58o?at_medium=RSS&at_campaign=rss": "2026-09-25"
+    "https://www.bbc.co.uk/news/articles/cm86xn0nnw58o?at_medium=RSS&at_campaign=rss": "2026-09-25",
+    "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdndqUFdtd2J6b19yZlhhZjlOZXVBYkNvYjVtTjQzYUxlRTVldkZHbjdQdDQtMGI0ZFEwSEY2MTc1OHNTcWJHUXJCbFJjSlpFb0o3blUxMTRBQWZncEVZaEZiMEdJbU9ZOGZIbUFxQzB3SGduZFZ2ZGFDYWNoZEtqVTd0QXRVZUc2UHRXMnpjUi1XM0d0a3dXcDg3ZFRqd2xsWHdzVXlhOXhMMDlQeHlpcEFXWjNncEZWbnBxZ0NaLXI?oc=5": "2026-09-26",
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQXpqc3VNWHNtNXBwci1OYjYwNmMybkZSRzNINElqdTRnRmwtT0JoVDQxVG95aDZ1YTNRT3R1YlljWUIwbGZhdkg1MjBTQ09YSERyRGZZVVozZDd4T0E4elNvMlBxaHI0aGpxcHRtN1JhTzdMNTJkeG5SQV9lUkdIbE1qWGVPY09wcWF2b3JXS3htRE4xS3RuM2lQVzBYU1piQjllcGRqdFI5ZUdMY3J0RVE4dHRvdw?oc=5": "2026-09-26",
+    "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss": "2026-09-26"
   },
-  "last_digest_sent": "2026-09-25"
+  "last_digest_sent": "2026-09-26"
 }
