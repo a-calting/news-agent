@@ -20,6 +20,7 @@ Setup (one time):
 Run it with:  python3 news.py
 """
 
+import sys                          # lets a failed run exit with an error
 import os                           # reads the API key from your environment
 import json                         # reads the AI's structured (JSON) reply
 import time                         # lets us pause briefly between notifications
@@ -46,6 +47,8 @@ MAX_HEADLINES = 10
 # Which Gemini model to use. gemini-2.5-flash is free and fast.
 # (You could switch this to "gemini-3.5-flash" later — also free.)
 GEMINI_MODEL = "gemini-2.5-flash"
+# A backup model, tried if the main one keeps failing (busy, retired, or out of quota).
+GEMINI_FALLBACK_MODEL = "gemini-3.5-flash"
 
 # Your categories. The AI must place each story into exactly one of these.
 CATEGORIES = [
@@ -91,7 +94,10 @@ QUIET_END = 8      # 8 am
 # "already sent" memory was ever cleared. Any extras beyond the cap are simply
 # left for later runs (sent a few at a time), and every story still appears on
 # the digest page straight away regardless.
-MAX_NOTIFICATIONS_PER_RUN = 3
+MAX_NOTIFICATIONS_PER_RUN = 7
+
+# Categories that always get first pick of the notification slots each run.
+PRIORITY_CATEGORIES = ("animals", "environment")
 
 # Where the published digest lives, and the public web address GitHub Pages
 # serves it at. The script writes the page into docs/index.html and pushes it.
@@ -140,6 +146,16 @@ SOURCES = [
         "name": "BBC Health",
         "url": "https://feeds.bbci.co.uk/news/health/rss.xml",
     },
+    {
+        # Dedicated feeds so environment and animal stories actually show up;
+        # the general world feeds rarely carry them.
+        "name": "The Guardian Environment",
+        "url": "https://www.theguardian.com/environment/rss",
+    },
+    {
+        "name": "The Guardian Animals",
+        "url": "https://www.theguardian.com/world/animals/rss",
+    },
 ]
 
 # What we tell the AI to do. This is the "job description" for the brain.
@@ -158,8 +174,22 @@ Return one entry in "stories" for every headline in the list, with:
        * "medium": a notable story worth a short push (one or two sentences).
        * "micro":  a minor but interesting story worth a one-line push.
        * "none":   not worth its own push; it still appears in the digest.
-Be selective with pushes: MOST stories should be "none". Only use "micro" or
-"medium" for stories that genuinely deserve an immediate notification.
+Lean towards pushing: if a story is genuinely interesting or noteworthy, use
+"micro" or "medium" so it reaches the phone. Reserve "none" for stories that are
+truly minor, repetitive, or of little general interest. It is fine for many
+stories in a batch to be "micro" or "medium".
+
+DIVERSITY RULE — this is mandatory:
+  * Spread "micro" and "medium" labels across as many different categories as
+    possible. Cap each category at 2 notifiable stories per run, even if the
+    category has dramatic news.
+  * Lighter categories — animals, environment, AI, tech, health — MUST receive
+    at least one "micro" or "medium" if there is any interesting story in them.
+    Do not let politics or military crowd them out.
+  * If two or more stories are about the same person, event, or subject (e.g.
+    multiple Trump stories, multiple obituaries, multiple stories about the same
+    conflict), mark only the single most informative one as notifiable and set
+    the rest to "none".
 
 STEP 2 — Choose ONE lead story.
 Pick the single most important, substantial story of the day to feature at the
@@ -316,15 +346,22 @@ def analyze_with_gemini(articles, api_key):
         "required": ["lead", "stories"],
     }
 
-    client = genai.Client(api_key=api_key)
+    # Pin the "v1beta" API: newer library versions default to "v1", which
+    # rejects system instructions (400 INVALID_ARGUMENT) and broke every run.
+    client = genai.Client(
+        api_key=api_key,
+        http_options=types.HttpOptions(api_version="v1beta"),
+    )
 
     # The free tier can briefly return "high demand" (503) errors. If that
     # happens, wait a few seconds and try again, up to a few times.
     last_error = None
-    for attempt in range(1, 4):
+    # Attempts 1-3 use the main model; attempt 4 tries the backup model.
+    models = [GEMINI_MODEL] * 3 + [GEMINI_FALLBACK_MODEL]
+    for attempt, model in enumerate(models, start=1):
         try:
             response = client.models.generate_content(
-                model=GEMINI_MODEL,
+                model=model,
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     system_instruction=SYSTEM_INSTRUCTION,
@@ -335,8 +372,9 @@ def analyze_with_gemini(articles, api_key):
             return json.loads(response.text)
         except Exception as error:
             last_error = error
-            if attempt < 3:
-                print(f"  (Gemini busy, attempt {attempt} failed — retrying in 10s...)")
+            # Print the real reason, so the GitHub log shows what went wrong.
+            print(f"  (Gemini attempt {attempt} with {model} failed: {error})")
+            if attempt < len(models):
                 time.sleep(10)
 
     # All attempts failed; let the caller report the problem.
@@ -612,7 +650,11 @@ def load_state():
         if when >= cutoff:
             fresh[link] = day
 
-    return {"notified": fresh, "last_digest_sent": stored.get("last_digest_sent")}
+    return {
+        "notified": fresh,
+        "last_digest_sent": stored.get("last_digest_sent"),
+        "category_last_sent": stored.get("category_last_sent", {}),
+    }
 
 
 def save_state(state):
@@ -622,6 +664,42 @@ def save_state(state):
             json.dump(state, seen_file, ensure_ascii=False, indent=2)
     except OSError as error:
         print(f"  (Could not save {SEEN_PATH}: {error})")
+
+
+def select_diverse(fresh_stories, category_last_sent, cap):
+    """Pick up to `cap` stories from `fresh_stories`, spreading across categories.
+
+    Categories that haven't been notified recently come first. Within each pass
+    we take one story per category (round-robin) before revisiting any category,
+    so every topic gets a turn before the dominant one can take a second slot.
+    """
+    from collections import defaultdict
+
+    by_cat = defaultdict(list)
+    for story in fresh_stories:
+        by_cat[story.get("category", "other")].append(story)
+
+    # Earlier ISO timestamp = longer ago = higher priority. Missing = never sent.
+    def cat_priority(cat):
+        last = category_last_sent.get(cat)
+        return last if last is not None else ""
+
+    # Animals and environment always go first when they have a story, then the
+    # rest in order of how long since each last got a notification.
+    sorted_cats = sorted(
+        by_cat.keys(),
+        key=lambda c: (c not in PRIORITY_CATEGORIES, cat_priority(c)),
+    )
+
+    selected = []
+    while len(selected) < cap and any(by_cat[c] for c in sorted_cats):
+        for cat in sorted_cats:
+            if len(selected) >= cap:
+                break
+            if by_cat[cat]:
+                selected.append(by_cat[cat].pop(0))
+
+    return selected
 
 
 def send_notifications(data, articles, topic):
@@ -652,10 +730,11 @@ def send_notifications(data, articles, topic):
             continue
         fresh.append(story)
 
-    # Never push more than MAX_NOTIFICATIONS_PER_RUN at once. Extras are held
-    # back (not sent, not recorded) so a later run picks them up a few at a
-    # time. They already appear on the digest page, so nothing is lost.
-    to_send = fresh[:MAX_NOTIFICATIONS_PER_RUN]
+    # Never push more than MAX_NOTIFICATIONS_PER_RUN at once. Pick stories via
+    # round-robin across categories so every topic gets a turn before any one
+    # topic can take a second slot. Extras are held back for later runs.
+    category_last_sent = state.get("category_last_sent", {})
+    to_send = select_diverse(fresh, category_last_sent, MAX_NOTIFICATIONS_PER_RUN)
     held_back = len(fresh) - len(to_send)
 
     print(f"\n{len(candidates)} mini/medium stories selected — "
@@ -676,13 +755,17 @@ def send_notifications(data, articles, topic):
         try:
             send_ntfy_notification(topic, title, story["body_fr"])
             sent += 1
-            # Remember it (by link) so future runs never send it again.
             if article and article.get("link"):
                 notified[article["link"]] = today_iso
+            # Record when this category last got a notification, so the next
+            # run's round-robin can deprioritise it in favour of quieter ones.
+            cat = story.get("category", "other")
+            category_last_sent[cat] = now_local().strftime("%Y-%m-%dT%H:%M")
         except Exception as error:
             print(f"  (Could not send '{title}': {error})")
         # A short pause so we stay under ntfy's free rate limit.
         time.sleep(1)
+    state["category_last_sent"] = category_last_sent
     print(f"Sent {sent} of {len(to_send)} new mini/medium notifications.")
 
     # 2) The "Résumé du jour" digest ping — at most once per day. The first run
@@ -712,25 +795,27 @@ def main():
         print("No Gemini API key found.")
         print("Get a free key at https://aistudio.google.com/apikey, then paste")
         print("it into the .env file (replace PASTE_YOUR_KEY_HERE).")
-        return
+        sys.exit(1)
 
     print("Fetching headlines...")
     articles = collect_all_articles()
     if not articles:
         print("No headlines could be fetched.")
-        return
+        sys.exit(1)
 
     print(f"Sending {len(articles)} headlines to Gemini for sorting...")
     try:
         data = analyze_with_gemini(articles, api_key)
     except Exception as error:
         print(f"The AI request failed: {error}")
-        return
+        # Exit with an error so the GitHub run shows as FAILED (red) and GitHub
+        # emails you, instead of silently "succeeding" with no news.
+        sys.exit(1)
 
     stories = data.get("stories", [])
     if not stories:
         print("The AI did not return any stories.")
-        return
+        sys.exit(1)
 
     print_grouped(data, articles)
 
